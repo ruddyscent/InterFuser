@@ -586,7 +586,10 @@ class InterfuserAgent(autonomous_agent.AutonomousAgent):
         return
 
     def destroy(self):
-        if self.ensemble:
-            del self.nets
-        else:
-            del self.net
+        try:
+            if self.ensemble:
+                del self.nets
+            else:
+                del self.net
+        except AttributeError:
+            pass
