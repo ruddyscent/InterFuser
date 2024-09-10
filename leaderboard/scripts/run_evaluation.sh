@@ -5,7 +5,7 @@ export CARLA_SERVER=${CARLA_ROOT}/CarlaUE4.sh
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla
 # export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla/dist/carla-0.9.10-py3.7-linux-x86_64.egg
-export PYTHONPATH=$PYTHONPATH:leaderboard
+export PYTHONPATH=$PYTHONPATH:/opt/leaderboard
 export PYTHONPATH=$PYTHONPATH:leaderboard/team_code
 # export PYTHONPATH=$PYTHONPATH:scenario_runner
 
@@ -17,7 +17,7 @@ export DEBUG_CHALLENGE=0
 export REPETITIONS=1 # multiple evaluation runs
 export ROUTES=/opt/leaderboard/data/routes_devtest.xml
 export TEAM_AGENT=/home/InterFuser/leaderboard/team_code/interfuser_agent.py # agent
-export TEAM_CONFIG=/home/InterFuser/interfuser.pth.tar # model checkpoint, not required for expert
+export TEAM_CONFIG=/home/InterFuser/leaderboard/team_code/interfuser_config.py # model checkpoint, not required for expert
 export CHECKPOINT_ENDPOINT=results/sample_result.json # results file
 export SCENARIOS=/home/InterFuser/leaderboard/data/scenarios/town05_all_scenarios.json
 export SAVE_PATH=data/eval # path for saving episodes while evaluating
